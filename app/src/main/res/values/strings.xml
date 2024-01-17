@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MaraPixels</string>
+    <string name="record_video">Record Video</string>
+    <string name="learning">Learning</string>
+    <string name="interactive_stories">Interactive Stories</string>
+    <string name="voice_input">Voice Input</string>
+</resources>

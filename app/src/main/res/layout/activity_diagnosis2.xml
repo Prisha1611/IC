@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diagnosis2">
+
+    <!-- Help Button at the top -->
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help ?"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="#5C6BC0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Question 3 Text -->
+    <TextView
+        android:id="@+id/question3Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Question 3: I find myself becoming strongly absorbed in something - even obsessional"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/helpButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Answer Choices Radio Group 3 -->
+    <RadioGroup
+        android:id="@+id/answerChoicesGroup3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/question3Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <!-- Answer Choice 1 -->
+        <RadioButton
+            android:id="@+id/choice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Definitely Agree"
+            android:textColor="#000000" />
+
+        <!-- Answer Choice 2 -->
+        <RadioButton
+            android:id="@+id/choice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slightly Agree"
+            android:textColor="#000000" />
+
+        <!-- Answer Choice 3 -->
+        <RadioButton
+            android:id="@+id/choice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slightly Disagree"
+            android:textColor="#000000" />
+
+        <!-- Answer Choice 4 -->
+        <RadioButton
+            android:id="@+id/choice4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Definitely Disagree"
+            android:textColor="#000000" />
+    </RadioGroup>
+
+    <!-- New Question 4 Text -->
+    <TextView
+        android:id="@+id/question4Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Question 4: I am very sensitive to noise and will wear earplugs or cover my ears in certain situations"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/answerChoicesGroup3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Answer Choices Radio Group 4 -->
+    <RadioGroup
+        android:id="@+id/answerChoicesGroup4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/question4Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <!-- Answer Choice 1 -->
+        <RadioButton
+            android:id="@+id/choice5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Definitely Agree"
+            android:textColor="#000000" />
+
+        <!-- Answer Choice 2 -->
+        <RadioButton
+            android:id="@+id/choice6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slightly Agree"
+            android:textColor="#000000" />
+
+        <!-- Answer Choice 3 -->
+        <RadioButton
+            android:id="@+id/choice7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slightly Disagree"
+            android:textColor="#000000" />
+
+        <!-- Answer Choice 4 -->
+        <RadioButton
+            android:id="@+id/choice8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Definitely Disagree"
+            android:textColor="#000000" />
+    </RadioGroup>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#3B7274"
+        app:cornerRadius="30dp"
+        android:text="Next"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/answerChoicesGroup4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

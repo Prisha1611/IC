@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <!-- Help Button at the top -->
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help ?"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="#5C6BC0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Mara Pixels"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/helpButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Instruction Text -->
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Select activities you like"
+        android:textSize="18sp"
+        android:textColor="#646464"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Learning Button -->
+    <ImageButton
+        android:id="@+id/learningButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_learning"
+    android:contentDescription="@string/learning"
+    app:layout_constraintTop_toBottomOf="@+id/instructionText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/storiesButton"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="16dp"/>
+
+    <!-- Stories Button -->
+    <ImageButton
+        android:id="@+id/storiesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_stories"
+    android:contentDescription="@string/interactive_stories"
+    app:layout_constraintTop_toBottomOf="@+id/instructionText"
+    app:layout_constraintStart_toEndOf="@+id/learningButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="32dp"
+    android:layout_marginStart="16dp"/>
+
+    <!-- Voice Input Button -->
+    <ImageButton
+        android:id="@+id/voiceInputButton"
+        android:layout_width="78dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ic_mic"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:contentDescription="@string/voice_input"
+    android:padding="40dp"
+    app:layout_constraintBottom_toTopOf="@+id/nextButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginBottom="35dp"/>
+
+    <!-- Next Button -->
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/nextButton"
+        android:text="Next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#3B7274"
+    android:textColor="#FFFFFF"
+    android:textSize="20sp"
+    android:fontFamily="@font/roboto_medium"
+    android:padding="12dp"
+    android:elevation="4dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="24dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
