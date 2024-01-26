@@ -69,23 +69,42 @@
     app:layout_constraintEnd_toEndOf="parent"
     android:layout_marginTop="32dp"
     android:layout_marginStart="16dp"/>
+    <!-- Add this TextView to display the generated story -->
+
 
     <!-- Voice Input Button -->
+
+    <!-- Next Button -->
+    <!-- Next Button -->
+
+    <TextView
+        android:id="@+id/storyTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voiceInputButton" />
+
     <ImageButton
         android:id="@+id/voiceInputButton"
         android:layout_width="78dp"
         android:layout_height="85dp"
+        android:layout_marginBottom="252dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/voice_input"
+        android:padding="40dp"
         android:src="@drawable/ic_mic"
-    android:background="?attr/selectableItemBackgroundBorderless"
-    android:contentDescription="@string/voice_input"
-    android:padding="40dp"
-    app:layout_constraintBottom_toTopOf="@+id/nextButton"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    android:layout_marginBottom="35dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Next Button -->
-    <!-- Next Button -->
     <Button
         android:id="@+id/nextButton"
         android:text="Next"
