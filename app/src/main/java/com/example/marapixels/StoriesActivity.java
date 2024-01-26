@@ -31,8 +31,6 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class StoriesActivity extends AppCompatActivity {
-
-    private static final String OPENAI_API_KEY = "YOUR_OPENAI_API_KEY";
     private static final String OPENAI_URL = "https://api.openai.com/v1/engines/davinci/completions";
 
     private Button generateStoryButton;
@@ -40,11 +38,16 @@ public class StoriesActivity extends AppCompatActivity {
     private ImageView generatedImageView;
     private RecyclerView storiesRecyclerView;
     private ProgressBar loadingIndicator;
+    private static final String OPENAI_API_KEY = "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";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stories);
+
+
+
+
 
         // Initialize UI elements
         generateStoryButton = findViewById(R.id.generateStoryButton);
@@ -91,7 +94,10 @@ public class StoriesActivity extends AppCompatActivity {
                 // Handle failure (e.g., network error)
                 e.printStackTrace();
                 // Hide loading indicator on failure
+                runOnUiThread(() ->{
                 loadingIndicator.setVisibility(View.GONE);
+
+            });
             }
 
             @Override
