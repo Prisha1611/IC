@@ -45,7 +45,7 @@ public class LearningActivity extends AppCompatActivity {
 
         Imageview = findViewById(R.id.imageview);
         editText = findViewById(R.id.editTextText);
-//        textView = findViewById(R.id.textView);
+        textView = findViewById(R.id.textView);
     }
 
     public void buttongenerate(View view) {
