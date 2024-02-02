@@ -57,22 +57,11 @@
         android:layout_marginTop="16dp" />
 
     <!-- ImageView for Displaying Images -->
-    <ImageView
-        android:id="@+id/generatedImageView"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@+id/generatedStoryTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
-
     <!-- List of Stories (RecyclerView) -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/storiesRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/generatedImageView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
