@@ -31,14 +31,14 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class StoriesActivity extends AppCompatActivity {
-    private static final String OPENAI_URL = "https://api.openai.com/v1/engines/davinci/completions";
+    private static final String OPENAI_URL = "";
 
     private Button generateStoryButton;
     private TextView generatedStoryTextView;
     private ImageView generatedImageView;
     private RecyclerView storiesRecyclerView;
     private ProgressBar loadingIndicator;
-    private static final String OPENAI_API_KEY = "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";
+    private static final String OPENAI_API_KEY = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class StoriesActivity extends AppCompatActivity {
         // Initialize UI elements
         generateStoryButton = findViewById(R.id.generateStoryButton);
         generatedStoryTextView = findViewById(R.id.generatedStoryTextView);
-        generatedImageView = findViewById(R.id.generatedImageView);
+//        generatedImageView = findViewById(R.id.generatedImageView);
         storiesRecyclerView = findViewById(R.id.storiesRecyclerView);
         loadingIndicator = findViewById(R.id.loadingIndicator);
 
@@ -140,33 +140,33 @@ public class StoriesActivity extends AppCompatActivity {
     }
 
     // Optionally, implement a method to handle images associated with the generated story
-    private void updateGeneratedImageView(String generatedStory) {
-        List<String> imageUrls = extractImageUrls(generatedStory);
-        ImageView generatedImage = findViewById(R.id.generatedImageView);
+//    private void updateGeneratedImageView(String generatedStory) {
+//        List<String> imageUrls = extractImageUrls(generatedStory);
+//        ImageView generatedImage = findViewById(R.id.generatedImageView);
+//
+//        // Load the first image using Picasso
+//        if (!imageUrls.isEmpty()) {
+//            String firstImageUrl = imageUrls.get(0);
+//            Picasso.get().load(firstImageUrl).into(generatedImage);
+//        }
+//    }
 
-        // Load the first image using Picasso
-        if (!imageUrls.isEmpty()) {
-            String firstImageUrl = imageUrls.get(0);
-            Picasso.get().load(firstImageUrl).into(generatedImage);
-        }
-    }
-
-    private List<String> extractImageUrls(String generatedStory) {
-        try {
-            JSONObject storyJson = new JSONObject(generatedStory);
-
-            // Example: Extract image URLs from a "images" array in the JSON
-            JSONArray imagesArray = storyJson.getJSONArray("images");
-            List<String> imageUrls = new ArrayList<>();
-
-            for (int i = 0; i < imagesArray.length(); i++) {
-                String imageUrl = imagesArray.getString(i);
-                imageUrls.add(imageUrl);
-            }
-            return imageUrls;
-        } catch (JSONException e) {
-            e.printStackTrace();
-            return new ArrayList<>();
-        }
-    }
+//    private List<String> extractImageUrls(String generatedStory) {
+//        try {
+//            JSONObject storyJson = new JSONObject(generatedStory);
+//
+//            // Example: Extract image URLs from a "images" array in the JSON
+//            JSONArray imagesArray = storyJson.getJSONArray("images");
+//            List<String> imageUrls = new ArrayList<>();
+//
+//            for (int i = 0; i < imagesArray.length(); i++) {
+//                String imageUrl = imagesArray.getString(i);
+//                imageUrls.add(imageUrl);
+//            }
+//            return imageUrls;
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//            return new ArrayList<>();
+//        }
+//    }
 }
